@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/login" method="post" modelAttribute="loginRequest">
+  <h2 class="text-center"><img src="/image/logo.png" style="margin-bottom:10px;height:100px"></h2>
+  <div class="form-group">
+    <input type="text" name="username" class="form-control" placeholder="Username" required="required">
+  </div>
+  <div class="form-group">
+    <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+  </div>
+  <h6 class="text-center"><span style="color:red"><c:if test="${not empty error}">${error}</c:if></span></h6>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+  </div>
+</form>
+</body>
+</html>
